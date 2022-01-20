@@ -17,7 +17,7 @@ MIAR/config.json is the config file. Some key json fields in config file are spe
 "text_field_embedder": word embedding, including pre-trained file and dimension of embedding    
 "pos_tag_embedding": pos-tag embedding   
 "optimizer": optimizer, we use Adam here   
-"num_epochs": training epochs>`   
+"num_epochs": training epochs   
 "cuda_device": training with CPU or GPU 
 ``` 
 Usage

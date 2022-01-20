@@ -1,0 +1,49 @@
+{
+  "dataset_reader": {
+    "type": "review_reader"
+  },
+  "train_data_path": "data/train.txt",
+  "validation_data_path": "data/val.txt",
+  "test_data_path":"data/test.txt",
+  "random_seed": 2022,
+  "numpy_seed": 2022,
+  "pytorch_seed": 2022,
+  "evaluate_on_test" : true,
+  "model": {
+    "type": "MIAR",
+    "text_field_embedder": {
+      "tokens": {
+        "type": "embedding",
+        "embedding_dim": 300,
+        "trainable": true,
+        "pretrained_file": "/data/Word Embedding.txt"
+      }
+    },
+    "pos_tag_embedding": {
+      "embedding_dim": 300,
+      "vocab_namespace": "pos_tag"
+    }
+  },
+  "iterator": {
+    "type": "bucket",
+    "batch_size": 256,
+    "sorting_keys": [
+      [
+        "text",
+        "num_tokens"
+      ]
+    ]
+  },
+  "trainer": {
+    "cuda_device": 1,
+    "optimizer": {
+      "type": "dense_sparse_adam",
+      "betas": [0.9, 0.999],
+      "eps": 1e-07,
+      "lr": 0.001
+    },
+    "validation_metric": "+fscore",
+    "num_epochs": 100,
+    "patience": 10
+  }
+}

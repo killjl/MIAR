@@ -1,14 +1,15 @@
 # MIAR
-=
 
-##Dependencies
+
+Dependencies
 -
 python >= 3.6
 Pytorch (1.0 <= version < 1.2)
 allennlp == 0.8.4
 '''pip install allennlp==0.8.4'''
 
-#Parameters Configuration
+Parameters Configuration
+-
 MIAR/config.json is the config file. Some key json fields in config file are specified as follows：
 '''
 "train_data_path": train file path
@@ -20,7 +21,8 @@ MIAR/config.json is the config file. Some key json fields in config file are spe
 "cuda_device": training with CPU or GPU
 '''
 
-#Usage
+Usage
+-
 To train a new model, run the following command:
 '''allennlp train <config file> -s <serialization path> -f --include-package MIAR'''
 For example, with:

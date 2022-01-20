@@ -11,8 +11,7 @@ Dependencies
 Parameters Configuration
 -
 MIAR/config.json is the config file. Some key json fields in config file are specified as follows：  
-`<"train_data_path": train file path>`   
-`<"validation_data_path": test file path>`   
+`<"train_data_path": train file path  "validation_data_path": test file path>`   
 `<"text_field_embedder": word embedding, including pre-trained file and dimension of embedding>`    
 `<"pos_tag_embedding": pos-tag embedding>`   
 `<"optimizer": optimizer, we use Adam here>`   

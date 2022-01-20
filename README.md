@@ -3,9 +3,9 @@
 
 Dependencies
 -
-*python >= 3.6  
-*Pytorch (1.0 <= version < 1.2)  
-*allennlp == 0.8.4  
+ *python >= 3.6  
+ *Pytorch (1.0 <= version < 1.2)  
+ *allennlp == 0.8.4  
 `<pip install allennlp==0.8.4>`  
 
 Parameters Configuration
